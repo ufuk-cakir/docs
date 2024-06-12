@@ -19,12 +19,12 @@ jobs:
           node-version: '18.12'
       - name: Navigate to rubix directory and install dependencies
         run: |
-          cd rubix
+          cd _rubix_src
           npm install
 
       - name: Build site
         run: |
-          cd rubix
+          cd _rubix_src
           npm run build
 
       - name: Deploy to GitHub Pages
