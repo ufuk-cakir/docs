@@ -3,7 +3,7 @@
     <div class="l-list" data-pagefind-body>
         {% set breadcrumbs = [{
             "title": title,
-            "url": page.url
+            "url": page.url | url
         }] %}
         {% include "partials/post-heading.html" %}
         <div class="l-list__inner l-list__inner--changelog">
