@@ -1,0 +1,13 @@
+{
+  "authorEmail": "mail@cakir-ufuk.de",
+  "authorName": "Ufuk Çakır",
+  "copyright": "Some rights reserved.",
+  "name": "RUBIX Code",
+  "slogen": "High-performance forward modelling IFU data cubes",
+  "social": {
+    "twitter": "https://twitter.com/ufuk_cakir_",
+    "github": "https://github.com/ufuk-cakir/rubix",
+    "discord": ""
+  },
+  "url": "https://cakir-ufuk.de"
+}

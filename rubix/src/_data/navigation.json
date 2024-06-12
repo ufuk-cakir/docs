@@ -1,0 +1,56 @@
+{
+  "header": [
+    {
+      "caption": "FAQ",
+      "url": "/faq/",
+      "external": false
+    },
+    {
+      "caption": "Changelog",
+      "url": "/changelog/",
+      "external": false
+    },
+    {
+      "caption": "ReadTheDocs",
+      "url": "https://github.com/ufuk-cakir/rubix",
+      "external": true
+    }
+  ],
+  "footer": [
+    {
+      "title": "Getting Started",
+      "items": [
+        {
+          "caption": "Introduction",
+          "url": "/getting-started/introduction/",
+          "external": false
+        }
+      ]
+    },
+    {
+      "title": "Rubix",
+      "items": [
+        {
+          "caption": "GitHub",
+          "url": "https://github.com/ufuk-cakir/rubix",
+          "external": true
+        },
+        {
+          "caption": "ReadTheDocs",
+          "url": "https://github.com/ufuk-cakir/rubix",
+          "external": true
+        }
+      ]
+    },
+    {
+      "title": "More About Me",
+      "items": [
+        {
+          "caption": "Ufuk Çakır",
+          "url": "https://cakir-ufuk.de/",
+          "external": true
+        }
+      ]
+    }
+  ]
+}

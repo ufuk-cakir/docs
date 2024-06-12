@@ -1,0 +1,70 @@
+<form id="configForm">
+    <div class="form-group">
+        <label for="pipelineName" class="form-group-label">Pipeline Name:</label>
+        <input type="text" id="pipelineName" name="pipelineName" value="calc_ifu" class="pagefind-ui__search-input">
+        <span class="help-icon">
+            <div class="help-tooltip">Name of the pipeline to be executed.</div>
+        </span>
+    </div>
+    
+    <div class="form-group">
+        <label for="logLevel" class="form-group-label">Log Level:</label>
+        <input type="text" id="logLevel" name="logLevel" value="INFO" class="pagefind-ui__search-input">
+        <span class="help-icon">
+            <div class="help-tooltip">Level of logging detail.</div>
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label for="simulationName" class="form-group-label">Simulation Name:</label>
+        <input type="text" id="simulationName" name="simulationName" value="IllustrisAPI" class="pagefind-ui__search-input">
+        <span class="help-icon">
+            <div class="help-tooltip">Name of the simulation to be used.</div>
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label for="telescopeName" class="form-group-label">Telescope:</label>
+        <select id="telescopeName" name="telescopeName" class="pagefind-ui__search-input">
+            <option value="MUSE">MUSE</option>
+        </select>
+        <span class="help-icon">
+            <div class="help-tooltip">Type of telescope to be used.</div>
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label for="rotationType" class="form-group-label">Rotation Type:</label>
+        <select id="rotationType" name="rotationType" class="pagefind-ui__search-input">
+            <option value="edge-on">Edge-on</option>
+        </select>
+        <span class="help-icon">
+            <div class="help-tooltip">Orientation of the galaxy.</div>
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label for="cosmologyName" class="form-group-label">Cosmology:</label>
+        <input type="text" id="cosmologyName" name="cosmologyName" value="PLANCK15" class="pagefind-ui__search-input">
+        <span class="help-icon">
+            <div class="help-tooltip">Cosmological model to be used.</div>
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label for="sspTemplateName" class="form-group-label">SSP Template Name:</label>
+        <input type="text" id="sspTemplateName" name="sspTemplateName" value="BruzualCharlot2003" class="pagefind-ui__search-input">
+        <span class="help-icon">
+            <div class="help-tooltip">Template for the stellar population synthesis.</div>
+        </span>
+    </div>
+
+    <button type="button" onclick="generateConfig()" class="btn btn--primary">Generate Config</button>
+</form>
+
+<h2>Generated Config:</h2>
+<pre id="configOutput"></pre>
+<button id="copyConfig" onclick="copyConfig()" style="display:none;" class="btn btn--secondary">Copy Config</button>
+<button id="downloadYaml" onclick="downloadYAML()" style="display:none;" class="btn btn--secondary">Download YAML</button>
+
+<script src="/js/config-generator-script.js"></script>
