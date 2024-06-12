@@ -14,7 +14,12 @@
     "sass:prod": "sass --load-path=node_modules --no-source-map --style=compressed src/scss:src/css",
     "sass:lint": "stylelint \"src/scss/**/*.scss\"",
     "sass:lint:fix": "stylelint \"src/scss/**/*.scss\" --fix",
-    "start": "npm-run-all --parallel eleventy:dev sass:dev"
+    "start": "npm-run-all --parallel eleventy:dev sass:dev",
+    "watch:sass": "sass src/static/scss:public/static/css --watch",
+    "build:sass": "sass src/static/scss:public/static/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "ELEVENTY_ENV=development eleventy",
+    "build": "npm run build:eleventy & npm run build:sass"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^3.1.0",
