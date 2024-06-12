@@ -16,16 +16,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
+          node-version: '18.12'
+      - name: Navigate to rubix directory and install dependencies
+        run: |
+          cd rubix
+          npm install
 
       - name: Build site
-        run: npm run build
+        run: |
+          cd rubix
+          npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs
+          publish_dir: rubix
