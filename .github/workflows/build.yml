@@ -23,12 +23,13 @@ jobs:
         run: |
           cd _rubix_src
           npm install -g npm@9.2.0 # Ensure this matches the required npm version
+          npm run build
 
       - name: Build site
         run: |
           cd _rubix_src
           pwd
-          npm run build
+          
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
