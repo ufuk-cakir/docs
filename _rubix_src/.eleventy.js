@@ -69,6 +69,6 @@ module.exports = config => {
       output: '../rubix'
     },
     passthroughFileCopy: true,
-    pathPrefix: './',
+    pathPrefix: '/docs/',
   };
 };
