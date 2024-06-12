@@ -5,8 +5,13 @@ on:
     branches:
       - main
 permissions:
-  id-token: write
   contents: read
+  pages: write
+  id-token: write
+ 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -37,6 +42,10 @@ jobs:
         run: |
           cd _rubix_src
           ls -R ../rubix
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ../rubix
   deploy:
     needs: build
     environment:
