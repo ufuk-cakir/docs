@@ -3,7 +3,7 @@
 
 <nav class="post-navigation">
     {% if previousPost %}
-        <a class="post-navigation-item post-navigation-item--prev" href="{{ previousPost.url }}">
+        <a class="post-navigation-item post-navigation-item--prev" href="{{ previousPost.url | url }}">
             <span class="post-navigation-item__icon">
                 {% svgIcon './src/img/icon/arrow-back.svg' %}
             </span>
@@ -14,14 +14,14 @@
         </a>
     {% endif %}
     {% if nextPost %}
-        <a class="post-navigation-item post-navigation-item--next" href="{{ nextPost.url }}">
+        <a class="post-navigation-item post-navigation-item--next" href="{{ nextPost.url | url }}">
             <span class="post-navigation-item__caption">
                 Next
                 <span class="post-navigation-item__title">{{ nextPost.data.title }}</span>
             </span>
             <span class="post-navigation-item__icon">
                 {% svgIcon './src/img/icon/arrow-forward.svg' %}
-            </span
-        ></a>
+            </span>
+        </a>
     {% endif %}
 </nav>

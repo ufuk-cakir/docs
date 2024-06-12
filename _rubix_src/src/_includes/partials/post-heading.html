@@ -22,7 +22,7 @@
                 {% if btn.type === 'outline' %}
                     {% set cls = 'btn--outline-primary' %}
                 {% endif %}
-                <a class="btn btn--lg {{ cls }}" href="{{ btn.url }}">{{ btn.caption }}</a>
+                <a class="btn btn--lg {{ cls }}" href="{{ btn.url | url }}">{{ btn.caption }}</a>
             {% endfor %}
         </div>
     {% endif %}

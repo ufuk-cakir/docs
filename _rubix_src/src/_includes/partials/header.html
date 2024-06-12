@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header__column">
-        <a class="header__logo" href="/" aria-label="{{ site.name }}">
+        <a class="header__logo" href="{{ '/' | url }}" aria-label="{{ site.name }}">
             {% svgIcon './src/img/rubix-logo.svg' %}
         </a>
         {% if navigation.header.length > 0 %}
@@ -9,7 +9,7 @@
                     {% for item in navigation.header %}
                     <li>
                         <a
-                            href="{{ item.url }}"
+                            href="{{ item.url | url }}"
                             {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
                             {% if item.external %}
                                 target="_blank"
@@ -27,8 +27,8 @@
                 </ul>
             </nav>
         {% endif %}
-        <button class="btn btn--primary btn--icon header__toggle" data-action="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toogle navigation">
-            {% svgIcon './src/img/icon/menu.svg', 'btn__icon' %}
+        <button class="btn btn--primary btn--icon header__toggle" data-action="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+            {% svgIcon './src/img/icon/menu.svg' %}
         </button>
     </div>
     <div class="header__actions">
@@ -41,7 +41,7 @@
                 </a>
             {% endif %}
             {% if (site.social.discord) %}
-                <a href="{{ site.social.discord }}" aria-label="Discrod">
+                <a href="{{ site.social.discord }}" aria-label="Discord">
                     {% svgIcon './src/img/icon/discord.svg' %}
                 </a>
             {% endif %}

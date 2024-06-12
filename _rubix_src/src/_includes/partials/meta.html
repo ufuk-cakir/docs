@@ -9,12 +9,12 @@
 {% endif %}
 
 {% set siteTitle = site.name %}
-{% set currentUrl = site.url + page.url %}
+{% set currentUrl = site.url + page.url | url %}
 
 {% if not socialImage %}
-    {% set socialImage = site.url + '/img/social-share.png' %}
+    {% set socialImage = site.url + '/img/social-share.png' | url %}
 {% else %}
-    {% set socialImage = site.url + socialImage %}
+    {% set socialImage = site.url + socialImage | url %}
 {% endif %}
 
 {% if metaTitle %}
@@ -49,4 +49,4 @@
     <meta property="og:description" content="{{ metaDesc }}" />
 {% endif %}
 
-<link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="{{ '/img/favicon.svg' | url }}" type="image/svg+xml" />
