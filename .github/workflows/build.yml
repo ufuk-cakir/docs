@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18.12.1' # Ensure this matches the required Node.js version
+          node-version: "18.12.1" # Ensure this matches the required Node.js version
 
       - name: Install npm
         run: npm install -g npm@9.2.0 # Ensure this matches the required npm version
@@ -35,9 +35,13 @@ jobs:
         run: |
           cd _rubix_src
           ls -R ../rubix
-
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ../rubix
+        id: deployment
+        uses: actions/deploy-pages@v2
