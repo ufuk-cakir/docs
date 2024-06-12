@@ -13,14 +13,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+   
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18.12'
+          node-version: '18.12.1' # Ensure this matches the required Node.js version
+
       - name: Navigate to rubix directory and install dependencies
         run: |
           cd _rubix_src
-          npm install
+          npm install -g npm@9.2.0 # Ensure this matches the required npm version
 
       - name: Build site
         run: |
