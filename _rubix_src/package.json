@@ -19,7 +19,7 @@
     "build:sass": "sass src/static/scss:public/static/css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "ELEVENTY_ENV=development eleventy",
-    "build": "npm run build:eleventy & npm run build:sass"
+    "build": "npx @11ty/eleventy"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^3.1.0",
