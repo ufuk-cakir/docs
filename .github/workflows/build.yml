@@ -27,7 +27,7 @@ jobs:
       - name: Build site
         run: |
           cd _rubix_src
-          npm run prod
+          npm run build:prod
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
