@@ -13,26 +13,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-   
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '18.12.1' # Ensure this matches the required Node.js version
 
+      - name: Install npm
+        run: npm install -g npm@9.2.0 # Ensure this matches the required npm version
+
       - name: Navigate to rubix directory and install dependencies
         run: |
           cd _rubix_src
-          npm install -g npm@9.2.0 # Ensure this matches the required npm version
-          npm run build
+          npm install
 
       - name: Build site
         run: |
           cd _rubix_src
-          pwd
-          
+          npm run build
+
+      - name: List files after build
+        run: |
+          cd _rubix_src
+          ls -R ../rubix
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: rubix
+          publish_dir: ../rubix
