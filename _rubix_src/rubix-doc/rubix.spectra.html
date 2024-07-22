@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rubix.spectra package &#8212; rubix  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rubix.spectra';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rubix  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="intro.html">
+    Welcome to rubix
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="demo.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    User API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="intro.html">
+    Welcome to rubix
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="demo.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    User API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rubix.core.html">rubix.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rubix.cosmology.html">rubix.cosmology package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rubix.galaxy.html">rubix.galaxy package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rubix.galaxy.input_handler.html">rubix.galaxy.input_handler package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="rubix.pipeline.html">rubix.pipeline package</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">rubix.spectra package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rubix.spectra.ssp.html">rubix.spectra.ssp package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rubix.telescope.html">rubix.telescope package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rubix.telescope.noise.html">rubix.telescope.noise package</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">rubix.spectr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="rubix-spectra-package">
+<h1>rubix.spectra package<a class="headerlink" href="#rubix-spectra-package" title="Link to this heading">#</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rubix.spectra.ssp.html">rubix.spectra.ssp package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rubix.spectra.ssp.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rubix.spectra.ssp.html#module-rubix.spectra.ssp.factory">rubix.spectra.ssp.factory module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.factory.get_ssp_template"><code class="docutils literal notranslate"><span class="pre">get_ssp_template()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rubix.spectra.ssp.html#module-rubix.spectra.ssp.fsps_grid">rubix.spectra.ssp.fsps_grid module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.fsps_grid.retrieve_ssp_data_from_fsps"><code class="docutils literal notranslate"><span class="pre">retrieve_ssp_data_from_fsps()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.fsps_grid.write_fsps_data_to_disk"><code class="docutils literal notranslate"><span class="pre">write_fsps_data_to_disk()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rubix.spectra.ssp.html#module-rubix.spectra.ssp.grid">rubix.spectra.ssp.grid module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.HDF5SSPGrid"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.HDF5SSPGrid.age"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.age</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.HDF5SSPGrid.flux"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.flux</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.HDF5SSPGrid.from_file"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.from_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.HDF5SSPGrid.metallicity"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.metallicity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.HDF5SSPGrid.wavelength"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.wavelength</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid"><code class="docutils literal notranslate"><span class="pre">SSPGrid</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid.age"><code class="docutils literal notranslate"><span class="pre">SSPGrid.age</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid.checkout_SSP_template"><code class="docutils literal notranslate"><span class="pre">SSPGrid.checkout_SSP_template()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid.convert_units"><code class="docutils literal notranslate"><span class="pre">SSPGrid.convert_units()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid.flux"><code class="docutils literal notranslate"><span class="pre">SSPGrid.flux</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid.from_file"><code class="docutils literal notranslate"><span class="pre">SSPGrid.from_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid.get_lookup_interpolation"><code class="docutils literal notranslate"><span class="pre">SSPGrid.get_lookup_interpolation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid.keys"><code class="docutils literal notranslate"><span class="pre">SSPGrid.keys()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid.metallicity"><code class="docutils literal notranslate"><span class="pre">SSPGrid.metallicity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.SSPGrid.wavelength"><code class="docutils literal notranslate"><span class="pre">SSPGrid.wavelength</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.pyPipe3DSSPGrid"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.age"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.age</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.flux"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.flux</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.from_file"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.from_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.get_tZ_models"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.get_tZ_models()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.get_wavelength_from_header"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.get_wavelength_from_header()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.metallicity"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.metallicity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="rubix.spectra.ssp.html#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.wavelength"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.wavelength</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rubix.spectra.ssp.html#module-rubix.spectra.ssp.templates">rubix.spectra.ssp.templates module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rubix.spectra.ssp.html#module-rubix.spectra.ssp">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-rubix.spectra.ifu">
+<span id="rubix-spectra-ifu-module"></span><h2>rubix.spectra.ifu module<a class="headerlink" href="#module-rubix.spectra.ifu" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ifu.calculate_cube">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ifu.</span></span><span class="sig-name descname"><span class="pre">calculate_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_stars</span> <span class="pre">n_wave_bins'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spaxel_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_stars'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_spaxels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'num_spaxels</span> <span class="pre">num_spaxels</span> <span class="pre">n_wave_bins'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/rubix/spectra/ifu.html#calculate_cube"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ifu.calculate_cube" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the spectral data cube</p>
+<p>Sum up the spectra of all stars in each spaxel to get the spectral data cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spectra</strong> (<em>array-like</em>) – The spectra of all stars.</p></li>
+<li><p><strong>spaxel_index</strong> (<em>array-like</em>) – The spaxel index of each star. This defines into which telescope pixel the star falls.</p></li>
+<li><p><strong>num_spaxels</strong> (<em>int</em>) – The number of spaxels in one direction of the telescope aperture. The resulting number of telescope bins is <cite>num_spaxels^2</cite>.
+Assumes that the maximum value in <cite>spaxel_index</cite> does not exceed this value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The spectral data cube.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ifu.calculate_diff">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ifu.</span></span><span class="sig-name descname"><span class="pre">calculate_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_with_zero</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ifu.html#calculate_diff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ifu.calculate_diff" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the difference between each element in a vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vec</strong> (<em>array-like</em>) – The input vector.</p></li>
+<li><p><strong>pad_with_zero</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to prepend the first element of the vector to the differences.
+Default is True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ifu.convert_luminoisty_to_flux">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ifu.</span></span><span class="sig-name descname"><span class="pre">convert_luminoisty_to_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">luminosity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_lum_dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CONSTANTS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'ADIABATIC_INDEX':</span> <span class="pre">1.6666666666666667,</span> <span class="pre">'BOLTZMANN_CONSTANT':</span> <span class="pre">1.38066e-16,</span> <span class="pre">'CMS_TO_KMS':</span> <span class="pre">'1e-5',</span> <span class="pre">'CM_TO_KPC':</span> <span class="pre">3.24078e-22,</span> <span class="pre">'GCM1_TO_MSOLKM1':</span> <span class="pre">5.02785e-29,</span> <span class="pre">'GCM3_TO_MSOLKM3':</span> <span class="pre">5.02785e-28,</span> <span class="pre">'GCM3_TO_MSOLKPC3':</span> <span class="pre">'1.477e31',</span> <span class="pre">'G_CONSTANT_CGS':</span> <span class="pre">6.6743e-11,</span> <span class="pre">'G_IN_KPCMSOLKMS2':</span> <span class="pre">4.3009e-06,</span> <span class="pre">'G_TO_MSOL':</span> <span class="pre">5.02785e-34,</span> <span class="pre">'LSOL_TO_ERG':</span> <span class="pre">'3.828e33',</span> <span class="pre">'MASS_OF_PROTON':</span> <span class="pre">1.67262e-24,</span> <span class="pre">'MPC_TO_CM':</span> <span class="pre">'3.08568e24',</span> <span class="pre">'SPEED_OF_LIGHT':</span> <span class="pre">299792.458,</span> <span class="pre">'S_TO_YR':</span> <span class="pre">3.171e-08}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ifu.html#convert_luminoisty_to_flux"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ifu.convert_luminoisty_to_flux" title="Link to this definition">#</a></dt>
+<dd><p>Convert luminosity to flux in units erg/s/cm^2/Angstrom as observed by the telescope</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ifu.cosmological_doppler_shift">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ifu.</span></span><span class="sig-name descname"><span class="pre">cosmological_doppler_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_bins'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_bins'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/rubix/spectra/ifu.html#cosmological_doppler_shift"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ifu.cosmological_doppler_shift" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the cosmological Doppler shift of a wavelength.
+:param z: The redshift.
+:type z: float
+:param wavelength: The wavelength in Angstrom.
+:type wavelength: float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The Doppler shifted wavelength in Angstrom.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ifu.get_velocity_component">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ifu.</span></span><span class="sig-name descname"><span class="pre">get_velocity_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'*</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'*</span> <span class="pre">1'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/rubix/spectra/ifu.html#get_velocity_component"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ifu.get_velocity_component" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ifu.resample_spectrum">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ifu.</span></span><span class="sig-name descname"><span class="pre">resample_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_spectrum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_bins_initial'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_wavelength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_bins_initial'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_wavelength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_bins_target'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_bins_target'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/rubix/spectra/ifu.html#resample_spectrum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ifu.resample_spectrum" title="Link to this definition">#</a></dt>
+<dd><p>Resample a spectrum to the wavelength grid of a telescope.
+:param initial_spectrum: The initial spectrum.
+:type initial_spectrum: array-like
+:param initial_wavelength: The initial wavelength grid.
+:type initial_wavelength: array-like
+:param target_wavelength: The target wavelength grid.
+:type target_wavelength: array-like</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The resampled spectrum.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ifu.velocity_doppler_shift">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ifu.</span></span><span class="sig-name descname"><span class="pre">velocity_doppler_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavelength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_bins'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'*</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'y'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SPEED_OF_LIGHT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">299792.458</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n_bins'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/rubix/spectra/ifu.html#velocity_doppler_shift"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ifu.velocity_doppler_shift" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the Doppler shift of a wavelength due to a velocity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wavelength</strong> (<em>float</em>) – The wavelength in Angstrom.</p></li>
+<li><p><strong>velocity</strong> (<em>float</em>) – The velocity in km/s.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Doppler shifted wavelength in Angstrom.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-rubix.spectra">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-rubix.spectra" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rubix.spectra.ifu">rubix.spectra.ifu module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ifu.calculate_cube"><code class="docutils literal notranslate"><span class="pre">calculate_cube()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ifu.calculate_diff"><code class="docutils literal notranslate"><span class="pre">calculate_diff()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ifu.convert_luminoisty_to_flux"><code class="docutils literal notranslate"><span class="pre">convert_luminoisty_to_flux()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ifu.cosmological_doppler_shift"><code class="docutils literal notranslate"><span class="pre">cosmological_doppler_shift()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ifu.get_velocity_component"><code class="docutils literal notranslate"><span class="pre">get_velocity_component()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ifu.resample_spectrum"><code class="docutils literal notranslate"><span class="pre">resample_spectrum()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ifu.velocity_doppler_shift"><code class="docutils literal notranslate"><span class="pre">velocity_doppler_shift()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rubix.spectra">Module contents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/rubix.spectra.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Ufuk Çakır.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

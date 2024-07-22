@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rubix.spectra.ssp package &#8212; rubix  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rubix.spectra.ssp';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rubix  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="intro.html">
+    Welcome to rubix
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="demo.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    User API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="intro.html">
+    Welcome to rubix
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="demo.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    User API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rubix.core.html">rubix.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rubix.cosmology.html">rubix.cosmology package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rubix.galaxy.html">rubix.galaxy package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rubix.galaxy.input_handler.html">rubix.galaxy.input_handler package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="rubix.pipeline.html">rubix.pipeline package</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="rubix.spectra.html">rubix.spectra package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">rubix.spectra.ssp package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rubix.telescope.html">rubix.telescope package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rubix.telescope.noise.html">rubix.telescope.noise package</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">rubix.spectr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="rubix-spectra-ssp-package">
+<h1>rubix.spectra.ssp package<a class="headerlink" href="#rubix-spectra-ssp-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-rubix.spectra.ssp.factory">
+<span id="rubix-spectra-ssp-factory-module"></span><h2>rubix.spectra.ssp.factory module<a class="headerlink" href="#module-rubix.spectra.ssp.factory" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.factory.get_ssp_template">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ssp.factory.</span></span><span class="sig-name descname"><span class="pre">get_ssp_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid"><span class="pre">SSPGrid</span></a></span></span><a class="reference internal" href="_modules/rubix/spectra/ssp/factory.html#get_ssp_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.factory.get_ssp_template" title="Link to this definition">#</a></dt>
+<dd><p>Get the SSP template from the configuration file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>template</strong> (<em>str</em>) – The template name of the SSP template.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The SSP template.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid">SSPGrid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-rubix.spectra.ssp.fsps_grid">
+<span id="rubix-spectra-ssp-fsps-grid-module"></span><h2>rubix.spectra.ssp.fsps_grid module<a class="headerlink" href="#module-rubix.spectra.ssp.fsps_grid" title="Link to this heading">#</a></h2>
+<p>Use python-fsps to retrieve a block of Simple Stellar Population (SSP) data
+adapted from <a class="github reference external" href="https://github.com/ArgonneCPAC/dsps/blob/main/dsps/data_loaders/retrieve_fsps_data.py">ArgonneCPAC/dsps</a></p>
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.fsps_grid.retrieve_ssp_data_from_fsps">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ssp.fsps_grid.</span></span><span class="sig-name descname"><span class="pre">retrieve_ssp_data_from_fsps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add_neb_emission</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imf_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peraa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid"><span class="pre">SSPGrid</span></a></span></span><a class="reference internal" href="_modules/rubix/spectra/ssp/fsps_grid.html#retrieve_ssp_data_from_fsps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.fsps_grid.retrieve_ssp_data_from_fsps" title="Link to this definition">#</a></dt>
+<dd><p>Use python-fsps to populate arrays and matrices of data
+for the default simple stellar populations (SSPs) in the shapes expected by DSPS
+adapted from <a class="github reference external" href="https://github.com/ArgonneCPAC/dsps/blob/main/dsps/data_loaders/retrieve_fsps_data.py">ArgonneCPAC/dsps</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>add_neb_emission</strong> (<em>bool</em><em>, </em><em>optional</em>) – Argument passed to fsps.StellarPopulation. Default is True.</p></li>
+<li><p><strong>imf_type</strong> (<em>int</em><em>, </em><em>optional</em>) – Argument passed to fsps.StellarPopulation to specify the IMF type. Default is 2 and specifies Chabrier (2003).
+See <a class="reference external" href="https://dfm.io/python-fsps/current/stellarpop_api/#example">https://dfm.io/python-fsps/current/stellarpop_api/#example</a> for more details.</p></li>
+<li><p><strong>zmet</strong> (<em>int</em><em>, </em><em>optional</em>) – Argument passed to fsps.StellarPopulation to specify the metallicity index. Default is None.</p></li>
+<li><p><strong>tage</strong> (<em>float</em><em>, </em><em>optional</em>) – Argument passed to fsps.StellarPopulation to specify the age of the SSP. Default is 0.0.</p></li>
+<li><p><strong>peraa</strong> (<em>bool</em><em>, </em><em>optional</em>) – Argument passed to fsps.StellarPopulation to specify whether the spectrum should be returned in Lsun/Angstrom (True) or Lsun/Hz (False). Default is True.</p></li>
+<li><p><strong>kwargs</strong> (<em>optional</em>) – Any keyword arguments passed to the retrieve_ssp_data_from_fsps function will be
+passed on to fsps.StellarPopulation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>ssp_lgmet</strong> (<em>ndarray of shape (n_met, )</em>) – Array of log10(Z) of the SSP templates
+where dimensionless Z is the mass fraction of elements heavier than He</p></li>
+<li><p><strong>ssp_lg_age_gyr</strong> (<em>ndarray of shape (n_ages, )</em>) – Array of log10(age/Gyr) of the SSP templates</p></li>
+<li><p><strong>ssp_wave</strong> (<em>ndarray of shape (n_wave, )</em>)</p></li>
+<li><p><strong>ssp_flux</strong> (<em>ndarray of shape (n_met, n_ages, n_wave)</em>) – SED of the SSP in units of Lsun/Hz/Msun</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The retrieve_ssp_data_from_fsps function is just a wrapper around
+python-fsps without any other dependencies. This standalone function
+should be straightforward to modify to use python-fsps to build
+alternate SSP data blocks.</p>
+<p>All DSPS functions operate on plain ndarrays, so user-supplied data
+storing alternate SSP models is supported. You will just need to
+pack your SSP data into arrays with shapes matching the shapes of
+the arrays returned by this function.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.fsps_grid.write_fsps_data_to_disk">
+<span class="sig-prename descclassname"><span class="pre">rubix.spectra.ssp.fsps_grid.</span></span><span class="sig-name descname"><span class="pre">write_fsps_data_to_disk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/home/ufuk/Dokumente/Research/Masterarbeit/rubix/rubix/spectra/ssp/templates'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_neb_emission</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imf_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peraa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ssp/fsps_grid.html#write_fsps_data_to_disk"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.fsps_grid.write_fsps_data_to_disk" title="Link to this definition">#</a></dt>
+<dd><p>Write FSPS ssp template data to disk in HDF5 format.
+adapted from <a class="github reference external" href="https://github.com/ArgonneCPAC/dsps/blob/main/scripts/write_fsps_data_to_disk.py">ArgonneCPAC/dsps</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outname</strong> (<em>str</em>) – The name of the output file.</p></li>
+<li><p><strong>file_location</strong> (<em>str</em><em>, </em><em>optional</em>) – The location where the file will be saved. Defaults to TEMPLATE_PATH.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-rubix.spectra.ssp.grid">
+<span id="rubix-spectra-ssp-grid-module"></span><h2>rubix.spectra.ssp.grid module<a class="headerlink" href="#module-rubix.spectra.ssp.grid" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.HDF5SSPGrid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rubix.spectra.ssp.grid.</span></span><span class="sig-name descname"><span class="pre">HDF5SSPGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">age</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metallicity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#HDF5SSPGrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.HDF5SSPGrid" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSPGrid</span></code></a></p>
+<p>Class for SSP models stored in HDF5 format.
+Mainly used for custom collection of Bruzual &amp; Charlot 2003 models and MILES models .</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.HDF5SSPGrid.age">
+<span class="sig-name descname"><span class="pre">age</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'age_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.age" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.HDF5SSPGrid.flux">
+<span class="sig-name descname"><span class="pre">flux</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'metallicity_bins</span> <span class="pre">age_bins</span> <span class="pre">wavelength_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.flux" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.HDF5SSPGrid.from_file">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid"><span class="pre">SSPGrid</span></a></span></span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#HDF5SSPGrid.from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.from_file" title="Link to this definition">#</a></dt>
+<dd><p>Load a SSP grid from a HDF5 file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config</strong> (<em>dict</em>) – Configuration dictionary.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The SSP grid in the correct units.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid">SSPGrid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.HDF5SSPGrid.metallicity">
+<span class="sig-name descname"><span class="pre">metallicity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'metallicity_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.metallicity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.HDF5SSPGrid.wavelength">
+<span class="sig-name descname"><span class="pre">wavelength</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'wavelength_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.wavelength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rubix.spectra.ssp.grid.</span></span><span class="sig-name descname"><span class="pre">SSPGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">age</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metallicity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#SSPGrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for all SSP</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid.age">
+<span class="sig-name descname"><span class="pre">age</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'age_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid.age" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid.checkout_SSP_template">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">checkout_SSP_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#SSPGrid.checkout_SSP_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid.checkout_SSP_template" title="Link to this definition">#</a></dt>
+<dd><p>Check if the SSP template exists on disk, if not download it
+from the given URL in the configuration dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>dict</em>) – Configuration dictionary.</p></li>
+<li><p><strong>file_location</strong> (<em>str</em>) – Location to save the template file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>file_path</strong> – The path to the file.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid.convert_units">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_units</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_units</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_units</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#SSPGrid.convert_units"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid.convert_units" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid.flux">
+<span class="sig-name descname"><span class="pre">flux</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'metallicity_bins</span> <span class="pre">age_bins</span> <span class="pre">wavelength_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid.flux" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid.from_file">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid"><span class="pre">SSPGrid</span></a></span></span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#SSPGrid.from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid.from_file" title="Link to this definition">#</a></dt>
+<dd><p>Template function to load a SSP grid from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>dict</em>) – Configuration dictionary.</p></li>
+<li><p><strong>file_location</strong> (<em>str</em>) – Location of the file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The SSP grid in the correct units.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid">SSPGrid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid.get_lookup_interpolation">
+<span class="sig-name descname"><span class="pre">get_lookup_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cubic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#SSPGrid.get_lookup_interpolation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid.get_lookup_interpolation" title="Link to this definition">#</a></dt>
+<dd><p>Returns a 2D interpolation function for the SSP grid.</p>
+<p>The function can be called with metallicity and age as arguments to get the flux at that metallicity and age.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>method</strong> (<em>str</em>) – The method to use for interpolation. Default is “cubic”.</p></li>
+<li><p><strong>extrap</strong> (<em>float</em><em>, </em><em>bool</em><em> or </em><em>tuple</em>) – The value to return for points outside the interpolation domain. Default is 0.
+See <a class="reference external" href="https://interpax.readthedocs.io/en/latest/_api/interpax.Interpolator2D.html#interpax.Interpolator2D">https://interpax.readthedocs.io/en/latest/_api/interpax.Interpolator2D.html#interpax.Interpolator2D</a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The 2D interpolation function.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Interp2D</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">SSPGrid</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lookup</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">get_lookup_interpolation</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">metallicity</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">age</span> <span class="o">=</span> <span class="mf">1e9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flux</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">(</span><span class="n">metallicity</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#SSPGrid.keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid.keys" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid.metallicity">
+<span class="sig-name descname"><span class="pre">metallicity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'metallicity_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid.metallicity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.SSPGrid.wavelength">
+<span class="sig-name descname"><span class="pre">wavelength</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'wavelength_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.SSPGrid.wavelength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.pyPipe3DSSPGrid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rubix.spectra.ssp.grid.</span></span><span class="sig-name descname"><span class="pre">pyPipe3DSSPGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">age</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metallicity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#pyPipe3DSSPGrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSPGrid</span></code></a></p>
+<p>Class for all SSP models supported by the pyPipe3D project.
+See <a class="reference external" href="http://ifs.astroscu.unam.mx/pyPipe3D/templates/">http://ifs.astroscu.unam.mx/pyPipe3D/templates/</a> for more information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.pyPipe3DSSPGrid.age">
+<span class="sig-name descname"><span class="pre">age</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'age_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.age" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.pyPipe3DSSPGrid.flux">
+<span class="sig-name descname"><span class="pre">flux</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'metallicity_bins</span> <span class="pre">age_bins</span> <span class="pre">wavelength_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.flux" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.pyPipe3DSSPGrid.from_file">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid"><span class="pre">SSPGrid</span></a></span></span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#pyPipe3DSSPGrid.from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.from_file" title="Link to this definition">#</a></dt>
+<dd><p>Load a SSP grid from a fits file in pyPipe3D format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config</strong> (<em>dict</em>) – Configuration dictionary.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The SSP grid in the correct units.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#rubix.spectra.ssp.grid.SSPGrid" title="rubix.spectra.ssp.grid.SSPGrid">SSPGrid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.pyPipe3DSSPGrid.get_tZ_models">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_tZ_models</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_models</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#pyPipe3DSSPGrid.get_tZ_models"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.get_tZ_models" title="Link to this definition">#</a></dt>
+<dd><p>Reads the values of age, metallicity and mass-to-light at the
+normalization flux from the SSP models FITS file.</p>
+<p>adapted from <a class="github reference external" href="https://github.com/reginasar/TNG_MaNGA_mocks/blob/3229dd47b441aef380ef7dbfdf110f39e5c5a77c/sin_ifu_clean.py#L1466">reginasar/TNG_MaNGA_mocks</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>header</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">astropy.io.fits.header.Header</span></code>) – FITS header with spectral data.</p></li>
+<li><p><strong>n_models</strong> (<em>int</em><em>, </em><em>number</em><em> of </em><em>models in the SSP grid.</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>array like</em> – Ages, in Gyr, in the sequence as they appear in FITS data.</p></li>
+<li><p><em>array like</em> – Metallicities in the sequence as they appear in FITS data.</p></li>
+<li><p><em>array like</em> – Mass-to-light value at the normalization wavelength.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.pyPipe3DSSPGrid.get_wavelength_from_header">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_wavelength_from_header</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubix/spectra/ssp/grid.html#pyPipe3DSSPGrid.get_wavelength_from_header"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.get_wavelength_from_header" title="Link to this definition">#</a></dt>
+<dd><p>Generates a wavelength array using <cite>header</cite>, a <code class="xref py py-class docutils literal notranslate"><span class="pre">astropy.io.fits.header.Header</span></code>
+instance, at axis <cite>wave_axis</cite>.</p>
+<p>wavelengths = CRVAL + CDELT*([0, 1, …, NAXIS] + 1 - CRPIX)</p>
+<p>adapted from <a class="github reference external" href="https://github.com/reginasar/TNG_MaNGA_mocks/blob/3229dd47b441aef380ef7dbfdf110f39e5c5a77c/sin_ifu_clean.py#L1466">reginasar/TNG_MaNGA_mocks</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>header</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">astropy.io.fits.header.Header</span></code>) – FITS header with spectral data.</p></li>
+<li><p><strong>wave_axis</strong> (<em>int</em><em>, </em><em>optional</em>) – The axis where the wavelength information is stored in <cite>header</cite>,
+(CRVAL, CDELT, NAXIS, CRPIX).
+Defaults to 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>Wavelengths array.</p>
+<p>wavelengths = CRVAL + CDELT*([0, 1, …, NAXIS] + 1 - CRPIX)</p>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.pyPipe3DSSPGrid.metallicity">
+<span class="sig-name descname"><span class="pre">metallicity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'metallicity_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.metallicity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rubix.spectra.ssp.grid.pyPipe3DSSPGrid.wavelength">
+<span class="sig-name descname"><span class="pre">wavelength</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Array</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'wavelength_bins'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.wavelength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-rubix.spectra.ssp.templates">
+<span id="rubix-spectra-ssp-templates-module"></span><h2>rubix.spectra.ssp.templates module<a class="headerlink" href="#module-rubix.spectra.ssp.templates" title="Link to this heading">#</a></h2>
+<p>This module contains the supported templates for the SSP grid.</p>
+</section>
+<section id="module-rubix.spectra.ssp">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-rubix.spectra.ssp" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rubix.spectra.ssp.factory">rubix.spectra.ssp.factory module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.factory.get_ssp_template"><code class="docutils literal notranslate"><span class="pre">get_ssp_template()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rubix.spectra.ssp.fsps_grid">rubix.spectra.ssp.fsps_grid module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.fsps_grid.retrieve_ssp_data_from_fsps"><code class="docutils literal notranslate"><span class="pre">retrieve_ssp_data_from_fsps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.fsps_grid.write_fsps_data_to_disk"><code class="docutils literal notranslate"><span class="pre">write_fsps_data_to_disk()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rubix.spectra.ssp.grid">rubix.spectra.ssp.grid module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.HDF5SSPGrid"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.age"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.age</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.flux"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.flux</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.from_file"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.from_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.metallicity"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.metallicity</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.HDF5SSPGrid.wavelength"><code class="docutils literal notranslate"><span class="pre">HDF5SSPGrid.wavelength</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid"><code class="docutils literal notranslate"><span class="pre">SSPGrid</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid.age"><code class="docutils literal notranslate"><span class="pre">SSPGrid.age</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid.checkout_SSP_template"><code class="docutils literal notranslate"><span class="pre">SSPGrid.checkout_SSP_template()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid.convert_units"><code class="docutils literal notranslate"><span class="pre">SSPGrid.convert_units()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid.flux"><code class="docutils literal notranslate"><span class="pre">SSPGrid.flux</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid.from_file"><code class="docutils literal notranslate"><span class="pre">SSPGrid.from_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid.get_lookup_interpolation"><code class="docutils literal notranslate"><span class="pre">SSPGrid.get_lookup_interpolation()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid.keys"><code class="docutils literal notranslate"><span class="pre">SSPGrid.keys()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid.metallicity"><code class="docutils literal notranslate"><span class="pre">SSPGrid.metallicity</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.SSPGrid.wavelength"><code class="docutils literal notranslate"><span class="pre">SSPGrid.wavelength</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.age"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.age</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.flux"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.flux</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.from_file"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.from_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.get_tZ_models"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.get_tZ_models()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.get_wavelength_from_header"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.get_wavelength_from_header()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.metallicity"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.metallicity</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rubix.spectra.ssp.grid.pyPipe3DSSPGrid.wavelength"><code class="docutils literal notranslate"><span class="pre">pyPipe3DSSPGrid.wavelength</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rubix.spectra.ssp.templates">rubix.spectra.ssp.templates module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rubix.spectra.ssp">Module contents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/rubix.spectra.ssp.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Ufuk Çakır.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

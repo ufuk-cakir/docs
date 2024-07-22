@@ -1,0 +1,3 @@
+{
+    "path": "../notebooks/spectra_calculation.ipynb"
+}

@@ -1,70 +1,269 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <form id="configForm">
-    <div class="form-group">
-        <label for="pipelineName" class="form-group-label">Pipeline Name:</label>
-        <input type="text" id="pipelineName" name="pipelineName" value="calc_ifu" class="pagefind-ui__search-input">
-        <span class="help-icon">
-            <div class="help-tooltip">Name of the pipeline to be executed.</div>
-        </span>
-    </div>
-    
-    <div class="form-group">
-        <label for="logLevel" class="form-group-label">Log Level:</label>
-        <input type="text" id="logLevel" name="logLevel" value="INFO" class="pagefind-ui__search-input">
-        <span class="help-icon">
-            <div class="help-tooltip">Level of logging detail.</div>
-        </span>
-    </div>
+    <div class="form-container">
+        <div class="form-group">
+            <label for="pipelineName" class="form-group-label">Pipeline Name:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="pipelineName" name="pipelineName" value="calc_ifu" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Name of the pipeline to be executed.</div>
+                </i>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="logLevel" class="form-group-label">Log Level:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="logLevel" name="logLevel" value="INFO" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Level of logging detail.</div>
+                </i>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label for="simulationName" class="form-group-label">Simulation Name:</label>
-        <input type="text" id="simulationName" name="simulationName" value="IllustrisAPI" class="pagefind-ui__search-input">
-        <span class="help-icon">
-            <div class="help-tooltip">Name of the simulation to be used.</div>
-        </span>
-    </div>
+        <div class="form-group">
+            <label for="logFilePath" class="form-group-label">Log File Path:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="logFilePath" name="logFilePath" value="" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Path to the log file.</div>
+                </i>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label for="telescopeName" class="form-group-label">Telescope:</label>
-        <select id="telescopeName" name="telescopeName" class="pagefind-ui__search-input">
-            <option value="MUSE">MUSE</option>
-        </select>
-        <span class="help-icon">
-            <div class="help-tooltip">Type of telescope to be used.</div>
-        </span>
-    </div>
+        <div class="form-group">
+            <label for="logFormat" class="form-group-label">Log Format:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="logFormat" name="logFormat" value="%(asctime)s - %(name)s - %(levelname)s - %(message)s" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Format of the log messages.</div>
+                </i>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label for="rotationType" class="form-group-label">Rotation Type:</label>
-        <select id="rotationType" name="rotationType" class="pagefind-ui__search-input">
-            <option value="edge-on">Edge-on</option>
-        </select>
-        <span class="help-icon">
-            <div class="help-tooltip">Orientation of the galaxy.</div>
-        </span>
-    </div>
+        <div class="form-group">
+            <label for="outputPath" class="form-group-label">Output Path:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="outputPath" name="outputPath" value="${window.location.href}output" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Path to save the output.</div>
+                </i>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label for="cosmologyName" class="form-group-label">Cosmology:</label>
-        <input type="text" id="cosmologyName" name="cosmologyName" value="PLANCK15" class="pagefind-ui__search-input">
-        <span class="help-icon">
-            <div class="help-tooltip">Cosmological model to be used.</div>
-        </span>
-    </div>
+        <div class="form-group">
+            <label for="saveName" class="form-group-label">Save Name:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="saveName" name="saveName" value="tng_14" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Name of the saved file.</div>
+                </i>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label for="sspTemplateName" class="form-group-label">SSP Template Name:</label>
-        <input type="text" id="sspTemplateName" name="sspTemplateName" value="BruzualCharlot2003" class="pagefind-ui__search-input">
-        <span class="help-icon">
-            <div class="help-tooltip">Template for the stellar population synthesis.</div>
-        </span>
+        <div class="form-group">
+            <label for="useSubset" class="form-group-label">Use Subset:</label>
+            <div style="display: flex; align-items: center;">
+                <select id="useSubset" name="useSubset" class="pagefind-ui__search-input">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Use a subset of data.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="subsetSize" class="form-group-label">Subset Size:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="number" id="subsetSize" name="subsetSize" value="10" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Size of the subset.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="apiKey" class="form-group-label">API Key:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="apiKey" name="apiKey" value="YOUR_API_KEY" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">API Key for the simulation.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="particleType" class="form-group-label">Particle Type:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="particleType" name="particleType" value="stars" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Type of particles to be used.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="simulationType" class="form-group-label">Simulation:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="simulationType" name="simulationType" value="TNG50-1" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Name of the simulation.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="snapshot" class="form-group-label">Snapshot:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="number" id="snapshot" name="snapshot" value="99" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Snapshot number.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="galaxyId" class="form-group-label">Galaxy ID:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="number" id="galaxyId" name="galaxyId" value="14" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">ID of the galaxy.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="reuse" class="form-group-label">Reuse:</label>
+            <div style="display: flex; align-items: center;">
+                <select id="reuse" name="reuse" class="pagefind-ui__search-input">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Reuse existing data.</div>
+                </i>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="telescopeName" class="form-group-label">Telescope:</label>
+            <div style="display: flex; align-items: center;">
+                <select id="telescopeName" name="telescopeName" class="pagefind-ui__search-input">
+                    <option value="MUSE">MUSE</option>
+                </select>
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Supported telescopes. Currently only MUSE.</div>
+                </i>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="psfName" class="form-group-label">PSF Name:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="psfName" name="psfName" value="gaussian" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Name of the Point Spread Function.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="psfSize" class="form-group-label">PSF Size:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="number" id="psfSize" name="psfSize" value="5" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Size of the PSF.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="psfSigma" class="form-group-label">PSF Sigma:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="number" step="0.1" id="psfSigma" name="psfSigma" value="0.6" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Sigma value of the PSF.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lsfSigma" class="form-group-label">LSF Sigma:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="number" step="0.1" id="lsfSigma" name="lsfSigma" value="0.5" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Sigma value of the Line Spread Function.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="signalToNoise" class="form-group-label">Signal to Noise:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="number" id="signalToNoise" name="signalToNoise" value="1" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Signal to noise ratio.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="noiseDistribution" class="form-group-label">Noise Distribution:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="noiseDistribution" name="noiseDistribution" value="normal" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Type of noise distribution.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="distZ" class="form-group-label">Distance Z:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="number" step="0.1" id="distZ" name="distZ" value="0.1" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Redshift distance.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="rotationType" class="form-group-label">Rotation Type:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="rotationType" name="rotationType" value="edge-on" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Type of galaxy rotation.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="cosmologyName" class="form-group-label">Cosmology Name:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="cosmologyName" name="cosmologyName" value="PLANCK15" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Cosmological model to be used.</div>
+                </i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sspTemplateName" class="form-group-label">SSP Template Name:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="sspTemplateName" name="sspTemplateName" value="BruzualCharlot2003" class="pagefind-ui__search-input">
+                <i class="fas fa-info-circle help-icon">
+                    <div class="help-tooltip">Template for the stellar population synthesis.</div>
+                </i>
+            </div>
+        </div>
     </div>
 
     <button type="button" onclick="generateConfig()" class="btn btn--primary">Generate Config</button>
 </form>
-
 <h2>Generated Config:</h2>
 <pre id="configOutput"></pre>
 <button id="copyConfig" onclick="copyConfig()" style="display:none;" class="btn btn--secondary">Copy Config</button>
 <button id="downloadYaml" onclick="downloadYAML()" style="display:none;" class="btn btn--secondary">Download YAML</button>
 
 <script src="{{ '/js/config-generator-script.js' | url }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.min.js"></script>

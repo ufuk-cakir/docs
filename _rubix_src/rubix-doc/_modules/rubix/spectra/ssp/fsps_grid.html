@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rubix.spectra.ssp.fsps_grid &#8212; rubix  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/rubix/spectra/ssp/fsps_grid';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rubix  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../intro.html">
+    Welcome to rubix
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../demo.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api.html">
+    User API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../intro.html">
+    Welcome to rubix
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../demo.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../api.html">
+    User API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">rubix.spectr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for rubix.spectra.ssp.fsps_grid</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Use python-fsps to retrieve a block of Simple Stellar Population (SSP) data</span>
+<span class="sd">adapted from https://github.com/ArgonneCPAC/dsps/blob/main/dsps/data_loaders/retrieve_fsps_data.py&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">rubix.logger</span> <span class="kn">import</span> <span class="n">get_logger</span>
+<span class="kn">from</span> <span class="nn">rubix</span> <span class="kn">import</span> <span class="n">config</span> <span class="k">as</span> <span class="n">rubix_config</span>
+<span class="kn">from</span> <span class="nn">rubix.paths</span> <span class="kn">import</span> <span class="n">TEMPLATE_PATH</span>
+<span class="kn">import</span> <span class="nn">h5py</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">importlib</span>
+<span class="kn">from</span> <span class="nn">.grid</span> <span class="kn">import</span> <span class="n">SSPGrid</span>
+
+<span class="c1"># Setup a logger based on the config</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">()</span>
+
+<span class="n">HAS_FSPS</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;fsps&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="k">if</span> <span class="n">HAS_FSPS</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">fsps</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+        <span class="s2">&quot;python-fsps is not installed. Please install it to use this function. Install using pip install fsps and check the installation page: https://dfm.io/python-fsps/current/installation/ for more details. Especially, make sure to set all necessary environment variables.&quot;</span>
+    <span class="p">)</span>
+
+
+<div class="viewcode-block" id="retrieve_ssp_data_from_fsps">
+<a class="viewcode-back" href="../../../../rubix.spectra.ssp.html#rubix.spectra.ssp.fsps_grid.retrieve_ssp_data_from_fsps">[docs]</a>
+<span class="k">def</span> <span class="nf">retrieve_ssp_data_from_fsps</span><span class="p">(</span>
+    <span class="n">add_neb_emission</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">imf_type</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">zmet</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tage</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">peraa</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;SSPGrid&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Use python-fsps to populate arrays and matrices of data</span>
+<span class="sd">    for the default simple stellar populations (SSPs) in the shapes expected by DSPS</span>
+<span class="sd">    adapted from https://github.com/ArgonneCPAC/dsps/blob/main/dsps/data_loaders/retrieve_fsps_data.py</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    add_neb_emission : bool, optional</span>
+<span class="sd">        Argument passed to fsps.StellarPopulation. Default is True.</span>
+
+<span class="sd">    imf_type : int, optional</span>
+<span class="sd">        Argument passed to fsps.StellarPopulation to specify the IMF type. Default is 2 and specifies Chabrier (2003).</span>
+<span class="sd">        See https://dfm.io/python-fsps/current/stellarpop_api/#example for more details.</span>
+
+<span class="sd">    zmet : int, optional</span>
+<span class="sd">        Argument passed to fsps.StellarPopulation to specify the metallicity index. Default is None.</span>
+
+<span class="sd">    tage : float, optional</span>
+<span class="sd">        Argument passed to fsps.StellarPopulation to specify the age of the SSP. Default is 0.0.</span>
+
+<span class="sd">    peraa : bool, optional</span>
+<span class="sd">        Argument passed to fsps.StellarPopulation to specify whether the spectrum should be returned in Lsun/Angstrom (True) or Lsun/Hz (False). Default is True.</span>
+
+<span class="sd">    kwargs : optional</span>
+<span class="sd">        Any keyword arguments passed to the retrieve_ssp_data_from_fsps function will be</span>
+<span class="sd">        passed on to fsps.StellarPopulation.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ssp_lgmet : ndarray of shape (n_met, )</span>
+<span class="sd">        Array of log10(Z) of the SSP templates</span>
+<span class="sd">        where dimensionless Z is the mass fraction of elements heavier than He</span>
+
+<span class="sd">    ssp_lg_age_gyr : ndarray of shape (n_ages, )</span>
+<span class="sd">        Array of log10(age/Gyr) of the SSP templates</span>
+
+<span class="sd">    ssp_wave : ndarray of shape (n_wave, )</span>
+
+<span class="sd">    ssp_flux : ndarray of shape (n_met, n_ages, n_wave)</span>
+<span class="sd">        SED of the SSP in units of Lsun/Hz/Msun</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The retrieve_ssp_data_from_fsps function is just a wrapper around</span>
+<span class="sd">    python-fsps without any other dependencies. This standalone function</span>
+<span class="sd">    should be straightforward to modify to use python-fsps to build</span>
+<span class="sd">    alternate SSP data blocks.</span>
+
+<span class="sd">    All DSPS functions operate on plain ndarrays, so user-supplied data</span>
+<span class="sd">    storing alternate SSP models is supported. You will just need to</span>
+<span class="sd">    pack your SSP data into arrays with shapes matching the shapes of</span>
+<span class="sd">    the arrays returned by this function.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">HAS_FSPS</span><span class="p">,</span> <span class="s2">&quot;Must have python-fsps installed to use this function&quot;</span>
+    <span class="kn">import</span> <span class="nn">fsps</span>
+
+    <span class="n">config</span> <span class="o">=</span> <span class="n">rubix_config</span><span class="p">[</span><span class="s2">&quot;ssp&quot;</span><span class="p">][</span><span class="s2">&quot;templates&quot;</span><span class="p">][</span><span class="s2">&quot;FSPS&quot;</span><span class="p">]</span>
+
+    <span class="n">sp</span> <span class="o">=</span> <span class="n">fsps</span><span class="o">.</span><span class="n">StellarPopulation</span><span class="p">(</span><span class="n">zcontinuous</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">imf_type</span><span class="o">=</span><span class="n">imf_type</span><span class="p">)</span>
+    <span class="n">ssp_lgmet</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">zlegend</span><span class="p">)</span>
+    <span class="n">nzmet</span> <span class="o">=</span> <span class="n">ssp_lgmet</span><span class="o">.</span><span class="n">size</span>
+    <span class="n">ssp_lg_age_gyr</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">log_age</span> <span class="o">-</span> <span class="mf">9.0</span>
+    <span class="n">spectrum_collector</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">zmet_indx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ssp_lgmet</span><span class="o">.</span><span class="n">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;...retrieving zmet = </span><span class="si">{0}</span><span class="s2"> of </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">zmet_indx</span><span class="p">,</span> <span class="n">nzmet</span><span class="p">))</span>
+        <span class="n">sp</span> <span class="o">=</span> <span class="n">fsps</span><span class="o">.</span><span class="n">StellarPopulation</span><span class="p">(</span>
+            <span class="n">zcontinuous</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">zmet</span><span class="o">=</span><span class="n">zmet_indx</span><span class="p">,</span>
+            <span class="n">add_neb_emission</span><span class="o">=</span><span class="n">add_neb_emission</span><span class="p">,</span>
+            <span class="n">imf_type</span><span class="o">=</span><span class="n">imf_type</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">_wave</span><span class="p">,</span> <span class="n">_fluxes</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">get_spectrum</span><span class="p">(</span><span class="n">zmet</span><span class="o">=</span><span class="n">zmet</span><span class="p">,</span> <span class="n">tage</span><span class="o">=</span><span class="n">tage</span><span class="p">,</span> <span class="n">peraa</span><span class="o">=</span><span class="n">peraa</span><span class="p">)</span>
+        <span class="n">spectrum_collector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_fluxes</span><span class="p">)</span>
+    <span class="n">ssp_wave</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">_wave</span><span class="p">)</span>
+    <span class="n">ssp_flux</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">spectrum_collector</span><span class="p">)</span>
+
+    <span class="n">grid</span> <span class="o">=</span> <span class="n">SSPGrid</span><span class="p">(</span><span class="n">ssp_lg_age_gyr</span><span class="p">,</span> <span class="n">ssp_lgmet</span><span class="p">,</span> <span class="n">ssp_wave</span><span class="p">,</span> <span class="n">ssp_flux</span><span class="p">)</span>
+    <span class="n">grid</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">grid</span></div>
+
+
+
+<div class="viewcode-block" id="write_fsps_data_to_disk">
+<a class="viewcode-back" href="../../../../rubix.spectra.ssp.html#rubix.spectra.ssp.fsps_grid.write_fsps_data_to_disk">[docs]</a>
+<span class="k">def</span> <span class="nf">write_fsps_data_to_disk</span><span class="p">(</span>
+    <span class="n">outname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">file_location</span><span class="o">=</span><span class="n">TEMPLATE_PATH</span><span class="p">,</span>
+    <span class="n">add_neb_emission</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">imf_type</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">peraa</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Write FSPS ssp template data to disk in HDF5 format.</span>
+<span class="sd">    adapted from https://github.com/ArgonneCPAC/dsps/blob/main/scripts/write_fsps_data_to_disk.py</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        outname (str): The name of the output file.</span>
+<span class="sd">        file_location (str, optional): The location where the file will be saved. Defaults to TEMPLATE_PATH.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">ssp_data</span> <span class="o">=</span> <span class="n">retrieve_ssp_data_from_fsps</span><span class="p">(</span>
+        <span class="n">add_neb_emission</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">imf_type</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">peraa</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_location</span><span class="p">,</span> <span class="n">outname</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Writing created FSPS data to disk under the following path: </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">.&quot;</span>
+    <span class="p">)</span>
+    <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">hdf</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">arr</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ssp_data</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">ssp_data</span><span class="p">):</span>
+            <span class="n">hdf</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Ufuk Çakır.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
