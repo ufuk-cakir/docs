@@ -1,4 +1,42 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+
+    .form-container {
+        max-width: 600px;
+        margin: auto;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group-label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .help-icon {
+        margin-left: 10px;
+        position: relative;
+    }
+    .help-tooltip {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background-color: #333;
+        color: #FFF;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 12px;
+        width: 200px;
+        text-transform: none;
+    }
+    .help-icon:hover .help-tooltip {
+        display: block;
+    }
+    .button-container {
+        display: flex;
+        gap: 10px; /* Adjust the gap as needed */
+    }
+</style>
 <form id="configForm">
     <div class="form-container">
         <div class="form-group">
@@ -262,8 +300,9 @@
 </form>
 <h2>Generated Config:</h2>
 <pre id="configOutput"></pre>
-<button id="copyConfig" onclick="copyConfig()" style="display:none;" class="btn btn--secondary">Copy Config</button>
-<button id="downloadYaml" onclick="downloadYAML()" style="display:none;" class="btn btn--secondary">Download YAML</button>
-
+<div class="button-container">
+    <button id="copyConfig" onclick="copyConfig()" style="display:none;" class="btn btn--secondary">Copy Config</button>
+    <button id="downloadYaml" onclick="downloadYAML()" style="display:none;" class="btn btn--secondary">Download YAML</button>
+</div>
 <script src="{{ '/js/config-generator-script.js' | url }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.min.js"></script>
